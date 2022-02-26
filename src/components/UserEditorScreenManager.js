@@ -28,7 +28,7 @@ export default function UserEditorScreenManager() {
 
     const handleSelectAllUser = (event) => {
         dispatchAction(setCommonCheckBoxState(event.target.checked))
-        for (let iterator = 0; iterator < usersToDisplay.length; iterator++) {
+        for (let iterator = NUMBER_CONSTANTS.ZERO; iterator < usersToDisplay.length; iterator++) {
             usersToDisplay[iterator].isSelected = event.target.checked;
             dispatchAction(updateUserSelection(usersToDisplay[iterator].id, event.target.checked))
         }
